@@ -84,7 +84,11 @@ Em nossa implementação, temos **3 módulos** que são:
 
 ---
 *Universidade Federal Rural do Rio de Janeiro 2019*
-Orientador: Filipe Braida
+
+Orientador: *Filipe Braida*
+
 Responsáveis:
+
 *Fellipe Bravo*
+
 *Gabriel Segobia*
