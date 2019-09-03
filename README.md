@@ -15,6 +15,17 @@
 
 ---
 
+## Sobre o projeto
+Esse é o projeto *React* de um aplicativo com a estrutura(...)
+
+Abaixo estão listadas algumas das principais bibliotecas utilizadas no projeto:
+  - *NodeJS*
+  - *Typescript*
+  - *React*
+  - *Sass*
+
+---
+
 ## Clean Architecture
 Com o crescimento de projetos foram identificadas diversas necessidades e, consequentemente, uma melhora na estrutura organizacional para evitar retrabalhos, modularizar ao máximo componentes e facilitar testes unitários.
 
@@ -56,14 +67,7 @@ Em nossa implementação, temos **3 módulos** que são:
     - **entity**: Pacote que contém as entidades da camada de dados;
     - **remote**: Pacote que contém classes responsáveis pela comunicação com APIs;
 
-## Sobre o projeto
-Esse é o projeto *React* de um aplicativo com a estrutura(...)
-
-Abaixo estão listadas algumas das principais bibliotecas utilizadas no projeto:
-  - *NodeJS*
-  - *Typescript*
-  - *React*
-  - *Sass*
+---
 
 ## MVP Pattern (Model-View-Presenter)
 // TODO: Escrever sobre o MVP
