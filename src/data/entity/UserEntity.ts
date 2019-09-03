@@ -1,6 +1,6 @@
-import { PresentationModel } from "../core/clean-arch/PresentationModel";
+import { Entity } from "../core/clean-arch/Entity";
 
-class UserModel extends PresentationModel {
+class UserEntity extends Entity {
     constructor(
         public id: string,
         public name: string, 
@@ -9,4 +9,4 @@ class UserModel extends PresentationModel {
         }
 }
 
-export default UserModel;
+export default UserEntity;
