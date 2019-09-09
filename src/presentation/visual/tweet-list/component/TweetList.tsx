@@ -19,7 +19,7 @@ class TweetList extends Component<{}> implements TweetListView {
     const tag = new TagModel(0, "tag1", 2)
 
     this.tweets = [
-      new TweetModel("1832981", `This is exhausting. Democrats blame: 
+      new TweetModel("1832981", `This is exhausting. Democrats blame:
       Russia
       Twitter
       YouTube
