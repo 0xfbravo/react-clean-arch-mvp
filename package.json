@@ -116,8 +116,8 @@
       "node"
     ],
     "watchPlugins": [
-      "/Users/felipebravo/Documents/tcc/node_modules/jest-watch-typeahead/filename.js",
-      "/Users/felipebravo/Documents/tcc/node_modules/jest-watch-typeahead/testname.js"
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
     ]
   },
   "babel": {

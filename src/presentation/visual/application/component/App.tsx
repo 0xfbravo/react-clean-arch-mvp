@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Navbar from '../../../visual/navbar/component/Navbar';
-import TweetList from '../../../visual/tweet-list/component/TweetList';
+import Classification from '../../classification/component/Classification';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { AppView } from '../AppView';
@@ -14,7 +14,7 @@ class App extends Component implements AppView {
     return (
       <Router>
         <Navbar />
-        <Route exact path="/" component={TweetList} />
+        <Route exact path="/" component={Classification} />
       </Router>
     );
   }

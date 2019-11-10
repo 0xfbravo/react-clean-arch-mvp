@@ -20,7 +20,7 @@ class Tweet extends Component<{model: TweetModel}> implements TweetView {
           <p className="text-grey-dark italic mt-5">{this.props.model.date.toDateString()}</p>
         </div>
         <div className="px-1 py-1">
-          {this.props.model.tags.map(tag => <Tag model={tag} />)}
+          {this.props.model.tags.map(tag => <Tag key={tag.id} model={tag} />)}
         </div>
       </div>
     );
