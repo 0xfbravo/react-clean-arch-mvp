@@ -9,7 +9,7 @@ class Classification extends Component implements ClassificationView {
   private presenter: ClassificationPresenter = new ClassificationPresenter(this);
   private tweet: TweetModel = this.presenter.getRandomTweet()
 
-  render() {
+  public render() {
     return (
       <Tweet model={this.tweet} />
     );

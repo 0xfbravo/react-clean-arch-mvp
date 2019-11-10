@@ -10,7 +10,7 @@ import { AppPresenter } from '../AppPresenter';
 class App extends Component implements AppView {
   private presenter: AppPresenter = new AppPresenter(this);
 
-  render() {
+  public render() {
     return (
       <Router>
         <Navbar />

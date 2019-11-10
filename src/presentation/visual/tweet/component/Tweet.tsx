@@ -9,7 +9,7 @@ import { TweetPresenter } from '../TweetPresenter';
 class Tweet extends Component<{model: TweetModel}> implements TweetView {
   private presenter: TweetPresenter = new TweetPresenter(this);
 
-  render() {
+  public render() {
     return (
       <div className="w-1/5 rounded overflow-hidden shadow-lg m-2">
         <UserInfos model={this.props.model.user} />

@@ -10,7 +10,7 @@ export class ClassificationPresenter {
         this.view = view
     }
 
-    classifyTweet() {
+    public classifyTweet() {
         // TODO: Update tweet classification
     }
 
@@ -28,7 +28,7 @@ export class ClassificationPresenter {
         return new TagModel(Math.floor(Math.random() * 10000) + 1, `Tag ${(Math.floor(Math.random() * 10000) + 1).toString()}`, Math.floor(Math.random() * 10000) + 1)
     }
 
-    getRandomTweet(): TweetModel {
+    public getRandomTweet(): TweetModel {
         const tags = [...Array(Math.floor((Math.random() * 5) + 1))]
         tags.forEach((element, index) => {
             tags[index] = this.newMockTag()
