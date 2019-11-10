@@ -5,7 +5,7 @@ import { NavbarPresenter } from '../NavbarPresenter';
 import { NavbarView } from '../NavbarView';
 
 class Navbar extends Component<{}> implements NavbarView {
-  private presenter = new NavbarPresenter(this);
+  private presenter: NavbarPresenter = new NavbarPresenter(this);
 
   render() {
     return (

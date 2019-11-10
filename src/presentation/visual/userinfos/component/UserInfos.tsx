@@ -5,7 +5,7 @@ import { UserInfosPresenter } from '../UserInfosPresenter';
 import { UserInfosView } from '../UserInfosView';
 
 class UserInfos extends Component<{model: UserModel}> implements UserInfosView {
-  private presenter = new UserInfosPresenter(this);
+  private presenter: UserInfosPresenter = new UserInfosPresenter(this);
 
   render() {
     return (

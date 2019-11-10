@@ -7,7 +7,7 @@ import { TweetView } from '../TweetView';
 import { TweetPresenter } from '../TweetPresenter';
 
 class Tweet extends Component<{model: TweetModel}> implements TweetView {
-  private presenter = new TweetPresenter(this);
+  private presenter: TweetPresenter = new TweetPresenter(this);
 
   render() {
     return (

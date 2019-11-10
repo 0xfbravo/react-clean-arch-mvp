@@ -5,7 +5,7 @@ import { TagView } from '../TagView';
 import { TagPresenter } from '../TagPresenter';
 
 class Tag extends Component<{model: TagModel}> implements TagView {
-  private presenter = new TagPresenter(this);
+  private presenter: TagPresenter = new TagPresenter(this);
 
   render() {
     return (

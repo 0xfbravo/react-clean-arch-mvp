@@ -8,7 +8,7 @@ import { AppView } from '../AppView';
 import { AppPresenter } from '../AppPresenter';
 
 class App extends Component implements AppView {
-  private presenter = new AppPresenter(this);
+  private presenter: AppPresenter = new AppPresenter(this);
 
   render() {
     return (
