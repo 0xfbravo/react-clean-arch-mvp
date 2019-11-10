@@ -1,30 +1,23 @@
 import React, { Component } from 'react';
 import './Classification.scss';
 import { ClassificationView } from '../ClassificationView';
-import { ClassificationPresenter } from '../ClassificationPresenter';
+import { ClassificationProps, classificationStateToProps, ClassificationPresenter } from '../ClassificationPresenter';
 import Tweet from '../../tweet/component/Tweet';
 import TweetModel from '../../../model/TweetModel';
 import { connect } from 'react-redux';
-import { AppState } from '../../../core/store';
 import { loadNewTweet } from '../../../core/store/tweet/actions';
-import { TweetState } from '../../../core/store/tweet/types';
 
-interface AppProps {
-  loadNewTweet: typeof loadNewTweet;
-  tweet: TweetState;
-}
-
-class Classification extends Component<AppProps> implements ClassificationView {
+class Classification extends Component<ClassificationProps> implements ClassificationView {
   private presenter: ClassificationPresenter = new ClassificationPresenter(this);
   
   public render() {
     console.log(this.props)
 
-    if (this.props.tweet.currentTweet == undefined) {
+    if (this.props.tweetReducer.currentTweet == undefined) {
       return (<span>Loading...</span> );
     }
     else {
-      return (<Tweet model={this.props.tweet.currentTweet} />);
+      return (<Tweet model={this.props.tweetReducer.currentTweet} />);
     }
   }
 
@@ -33,8 +26,6 @@ class Classification extends Component<AppProps> implements ClassificationView {
   }
 }
 
-const mapStateToProps = (state: AppState) => ({
-  tweet: state.tweet
-})
 
-export default connect(mapStateToProps, { loadNewTweet })(Classification);
+
+export default connect(classificationStateToProps, { loadNewTweet })(Classification);

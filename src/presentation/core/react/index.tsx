@@ -4,7 +4,7 @@ import './index.scss';
 import App from '../../visual/application/component/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import configureStore, { AppState } from '../store';
+import { configureStore, AppState } from '../store';
 
 const store = configureStore();
 const Root = () => (

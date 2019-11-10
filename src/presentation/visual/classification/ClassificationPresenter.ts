@@ -2,7 +2,33 @@ import { ClassificationView } from "./ClassificationView";
 import TweetModel from "../../model/TweetModel";
 import UserModel from "../../model/UserModel";
 import TagModel from "../../model/TagModel";
+import { AppState } from '../../core/store';
+import { loadNewTweet } from '../../core/store/tweet/actions';
+import { TweetState } from '../../core/store/tweet/types';
 
+/**
+ * Function to map Redux State to
+ * React Component Properties
+ * @param state Redux State from all application
+ */
+export const classificationStateToProps = (state: AppState) => ({ tweetReducer: state.tweet })
+
+/**
+ * Classification Props
+ * --
+ * These properties are exclusive to
+ * the Classification Component
+ */
+export interface ClassificationProps {
+    loadNewTweet: typeof loadNewTweet;
+    tweetReducer: TweetState;
+}
+
+/**
+ * Classification Presenter
+ * --
+ * Responsible for all component logic
+ */
 export class ClassificationPresenter {
     private view: ClassificationView
 

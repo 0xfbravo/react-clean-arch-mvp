@@ -3,7 +3,7 @@ import { TweetActionsTypes } from "../../store/tweet/action-types";
 
 export const loadNewTweet = (tweet: TweetModel) => {
     return {
-        type: TweetActionsTypes.LOAD_NEW_TWEET,
-        newTweet: tweet
+        newTweet: tweet,
+        type: TweetActionsTypes.LOAD_NEW_TWEET
     };
 }
