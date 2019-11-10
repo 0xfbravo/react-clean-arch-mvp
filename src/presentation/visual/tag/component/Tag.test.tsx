@@ -6,7 +6,7 @@ import { TagModel } from '../../../model/TagModel';
 /**
  * Creates a mock tag model
  */
-function newMockTag(): TagModel {
+const newMockTag = (): TagModel => {
   return new TagModel(Math.floor(Math.random() * 10000) + 1, `Tag ${(Math.floor(Math.random() * 10000) + 1).toString()}`, Math.floor(Math.random() * 10000) + 1)
 }
 

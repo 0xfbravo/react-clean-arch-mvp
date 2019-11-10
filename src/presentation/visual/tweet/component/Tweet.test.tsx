@@ -8,21 +8,21 @@ import TagModel from '../../../model/TagModel';
 /**
  * Creates a mock user model
  */
-function newMockUserModel(): UserModel {
+const newMockUserModel = (): UserModel => {
   return new UserModel((Math.floor(Math.random() * 10000) + 1).toString(), "Sir Algo", "https://tailwindcss.com/img/jonathan.jpg")
 }
 
 /**
  * Creates a mock tag model
  */
-function newMockTag(): TagModel {
+const newMockTag = (): TagModel => {
   return new TagModel(Math.floor(Math.random() * 10000) + 1, `Tag ${(Math.floor(Math.random() * 10000) + 1).toString()}`, Math.floor(Math.random() * 10000) + 1)
 }
 
 /**
  * Creates a mock tweet
  */
-function newMockTweet(): TweetModel {
+const newMockTweet = (): TweetModel => {
   return new TweetModel((Math.floor(Math.random() * 10000) + 1).toString(), `Tweet text`, new Date(), newMockUserModel(), [newMockTag(),newMockTag(),newMockTag()])
 }
 

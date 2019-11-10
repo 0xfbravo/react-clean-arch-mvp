@@ -6,7 +6,7 @@ import UserModel from '../../../model/UserModel';
 /**
  * Creates a mock user model
  */
-function newMockUserModel(): UserModel {
+const newMockUserModel = (): UserModel => {
   return new UserModel((Math.floor(Math.random() * 10000) + 1).toString(), "Sir Algo", "https://tailwindcss.com/img/jonathan.jpg")
 }
 
