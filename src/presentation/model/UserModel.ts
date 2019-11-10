@@ -10,3 +10,4 @@ class UserModel extends PresentationModel {
 }
 
 export default UserModel;
+

@@ -1,1 +1,3 @@
-export enum TweetActionsTypes { LOAD_NEW_TWEET }
+export enum TweetActionsTypes {
+    LOAD_NEW_TWEET,
+}

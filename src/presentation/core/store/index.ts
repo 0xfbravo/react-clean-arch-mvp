@@ -1,7 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { tweetReducer } from './tweet/reducers';
 
-const rootReducer = combineReducers({ tweet: tweetReducer });
+const rootReducer = combineReducers({
+  tweet: tweetReducer,
+});
 
 export const configureStore = () => {
   const store = createStore(rootReducer);
