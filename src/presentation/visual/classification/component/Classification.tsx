@@ -4,16 +4,37 @@ import { ClassificationView } from '../ClassificationView';
 import { ClassificationPresenter } from '../ClassificationPresenter';
 import Tweet from '../../tweet/component/Tweet';
 import TweetModel from '../../../model/TweetModel';
+import { connect } from 'react-redux';
+import { AppState } from '../../../core/store';
+import { loadNewTweet } from '../../../core/store/tweet/actions';
+import { TweetState } from '../../../core/store/tweet/types';
 
-class Classification extends Component implements ClassificationView {
+interface AppProps {
+  loadNewTweet: typeof loadNewTweet;
+  tweet: TweetState;
+}
+
+class Classification extends Component<AppProps> implements ClassificationView {
   private presenter: ClassificationPresenter = new ClassificationPresenter(this);
-  private tweet: TweetModel = this.presenter.getRandomTweet()
-
+  
   public render() {
-    return (
-      <Tweet model={this.tweet} />
-    );
+    console.log(this.props)
+
+    if (this.props.tweet.currentTweet == undefined) {
+      return (<span>Loading...</span> );
+    }
+    else {
+      return (<Tweet model={this.props.tweet.currentTweet} />);
+    }
+  }
+
+  public updateTweetInformations(newTweet: TweetModel): void {
+    this.props.loadNewTweet(newTweet);
   }
 }
 
-export default Classification;
+const mapStateToProps = (state: AppState) => ({
+  tweet: state.tweet
+})
+
+export default connect(mapStateToProps, { loadNewTweet })(Classification);

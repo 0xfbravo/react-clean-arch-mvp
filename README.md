@@ -22,6 +22,7 @@ Abaixo estão listadas algumas das principais bibliotecas utilizadas no projeto:
   - *NodeJS*
   - *Typescript*
   - *React*
+  - *Redux*
   - *Sass*
 
 ---
